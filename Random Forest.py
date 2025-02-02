@@ -15,8 +15,6 @@ data = pd.read_csv("D:/Misc. Work/PIP summer prog/feature_statistics.csv")
 if 'person_id' in data.columns:
     data = data.drop(columns=['person_id'])
 
-# Visualization
-
 # Histograms
 data.iloc[:, :-1].hist(figsize=(15, 10))
 plt.suptitle('Histograms of Acceleration Features')
@@ -76,8 +74,6 @@ print(classification_report(y_test, y_pred))
 train_pred = clf.predict(X_train_scaled)
 train_acc = accuracy_score(y_train, train_pred)
 test_acc = accuracy_score(y_test, y_pred)
-
-
 
 print(f"Training Accuracy: {train_acc:.4f}")
 print(f"Test Accuracy: {test_acc:.4f}")
