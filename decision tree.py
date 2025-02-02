@@ -14,8 +14,6 @@ data = pd.read_csv("D:/Misc. Work/PIP summer prog/feature_statistics.csv")
 if 'person_id' in data.columns:
     data = data.drop(columns=['person_id'])
 
-# Visualization
-
 # Histograms
 data.iloc[:, :-1].hist(figsize=(15, 10))
 plt.suptitle('Histograms of Acceleration Features')
